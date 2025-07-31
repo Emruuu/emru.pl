@@ -136,6 +136,50 @@ emru.pl/
 │
 └── README.md
 ```
+---
+
+Struktura bazy danych:
+```
+Tabela users
+
+id (PK, SERIAL)
+
+username (LOWERCASE)
+
+display_name (oryginalna forma)
+
+email (LOWERCASE)
+
+password (HASHED)
+
+activation_token (NULL po aktywacji)
+
+is_active (BOOLEAN)
+
+role (user / admin)
+
+Tabela messages (posty)
+
+id (PK, SERIAL)
+
+user_id (FK → users.id)
+
+message (TEXT)
+
+sent_at (TIMESTAMP, NOW() przy dodaniu)
+
+Tabela comments (komentarze)
+
+id (PK, SERIAL)
+
+message_id (FK → messages.id)
+
+user_id (FK → users.id)
+
+content (TEXT)
+
+created_at (TIMESTAMP, NOW() przy dodaniu)
+```
 
 ---
 
