@@ -26,8 +26,8 @@ emru.pl to platforma społecznościowa stworzona dla użytkowników serwera Team
 ### 📝 Posty społeczności
 ![Feed screenshot](screenshots/feed.png)
 
-### 👤 Panel administratora
-![Admin screenshot](screenshots/admin.png)
+### 👤 Teamspeak
+![Admin screenshot](screenshots/teamspeak.png)
 
 ---
 
