@@ -50,18 +50,18 @@ emru.pl to platforma społecznościowa stworzona dla użytkowników serwera Team
 ## 🔧 Instalacja i uruchomienie
 
 ### 1️⃣ Klonowanie repozytorium
-\`\`\`bash
+```bash
 git clone https://github.com/twoj-login/emru.pl.git
 cd emru.pl
-\`\`\`
+```
 
 ### 2️⃣ Backend
-\`\`\`bash
+```bash
 cd backend
 npm install
-\`\`\`
+```
 Utwórz plik \`.env\` (na podstawie \`.env.example\`) i uzupełnij danymi:
-\`\`\`env
+```env
 DB_USER=
 DB_PASS=
 DB_HOST=
@@ -79,28 +79,28 @@ TS3_QUERY_PORT=
 TS3_SERVER_PORT=
 TS3_QUERY_USER=
 TS3_QUERY_PASS=
-\`\`\`
+```
 
 Uruchom backend:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 (Domyślnie działa na \`http://localhost:3001\`)
 
 ### 3️⃣ Frontend
-\`\`\`bash
+```bash
 cd frontend
 npm install
-\`\`\`
+```
 Utwórz plik \`.env\`:
-\`\`\`env
+```env
 VITE_API_URL=http://localhost:3001
-\`\`\`
+```
 
 Uruchom frontend:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 (Domyślnie działa na \`http://localhost:5173\`)
 
 ---
@@ -119,7 +119,7 @@ npm run dev
 ---
 
 ## 🏗️ Struktura projektu
-\`\`\`
+```
 emru.pl/
 │
 ├── backend/          # Node.js + Express API
@@ -135,7 +135,7 @@ emru.pl/
 │   └── vite.config.js
 │
 └── README.md
-\`\`\`
+```
 
 ---
 
