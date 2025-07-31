@@ -158,8 +158,6 @@ CREATE TABLE users (
 ```
 Tabela messages (posty)
 ```sql
-Kopiuj
-Edytuj
 CREATE TABLE messages (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id) ON DELETE CASCADE,
@@ -169,8 +167,6 @@ CREATE TABLE messages (
 ```
 Tabela comments (komentarze)
 ```sql
-Kopiuj
-Edytuj
 CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
     message_id INT REFERENCES messages(id) ON DELETE CASCADE,
