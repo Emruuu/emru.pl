@@ -1,0 +1,559 @@
+﻿body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	margin: 0;
+	background-color: #555;
+	background-image: url('/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#kontener {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+/* Góra */
+
+#upper {
+	font-size: 1.4em;
+	height: 103px;
+	margin-top: 20px;
+	border-radius: 10px;
+	border: 2px solid orange;
+	display: flex;
+}
+
+#upperb1 {
+	flex: 1;
+	padding-left: 2%;
+	background-color: #222;
+	border-radius: 10px 0 0 10px;
+	color: white;
+}
+
+#upperb2, #upperb3 {
+	width: 12%;
+	height: 69px;
+	padding-left: 2%;
+	padding-top: 35px;
+	background-color: #222;
+	color: white;
+}
+
+#upperb3 {
+	border-radius: 0 10px 10px 0;
+}
+
+a {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px 12px;
+	text-decoration: none;
+}
+
+	a:hover:not(.active) {
+		background-color: orange;
+	}
+
+nav ul {
+	list-style-type: none;
+	margin: 5px 0 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+}
+
+	nav ul li {
+		float: left;
+	}
+
+		nav ul li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+			nav ul li a:hover:not(.active) {
+				background-color: #111;
+			}
+
+.active {
+	background-color: orange;
+}
+
+/* Kontent */
+
+#kontentkont {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#kontent {
+	background: #FFFFFF;
+	border-radius: 0 0 10px 10px;
+	border: 1px solid #ebebeb;
+	margin: 5px;
+	padding: 20px;
+}
+
+/* Stopka */
+
+#stopkakont {
+	width: 1024px;
+	float: left;
+	margin: 0 auto;
+	clear: both;
+}
+
+#stopka {
+	float: right;
+	height: 40px;
+	border-radius: 10px;
+	border: 2px solid orange;
+	margin: 5px;
+	background-color: white;
+	text-align: center;
+}
+
+#podpis {
+	padding: 5px;
+	margin: 5px 10px 0 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.form-post {
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid silver;
+	outline: 5px solid #ebebeb;
+	display: block;
+}
+
+.post {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+}
+
+.post-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.post-time {
+	font-size: 12px;
+	color: #777;
+}
+
+.delete-post {
+	background: #ff4444;
+	color: white;
+	border: none;
+	padding: 4px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.comment {
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.comment-meta {
+	font-size: 11px;
+	color: #888;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.delete-comment {
+	background: #cc0000;
+	color: white;
+	border: none;
+	padding: 2px 6px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 11px;
+}
+
+.comment-form {
+	margin-top: 10px;
+	margin-left: 20px;
+	display: flex;
+	gap: 5px;
+}
+
+	.comment-form input[type="text"] {
+		width: 70%;
+		padding: 6px;
+		font-size: 14px;
+	}
+
+	.comment-form button {
+		padding: 6px 10px;
+		cursor: pointer;
+	}
+
+.post {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+}
+
+.post-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.post-time {
+	font-size: 12px;
+	color: #777;
+	margin-top: 5px;
+}
+
+.comment {
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.comment-meta {
+	font-size: 11px;
+	color: #888;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 2px;
+}
+
+.comment-form {
+	margin-top: 10px;
+	margin-left: 20px;
+	display: flex;
+	gap: 5px;
+}
+
+	.comment-form input[type="text"] {
+		width: 70%;
+		padding: 6px;
+		font-size: 14px;
+	}
+
+	.comment-form button {
+		padding: 6px 10px;
+		cursor: pointer;
+	}
+
+.btn-delete-post {
+	background-color: #cc0000;
+	color: white;
+	border: none;
+	padding: 3px 8px;
+	font-size: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.btn-delete-comment {
+	background-color: #cc0000;
+	color: white;
+	border: none;
+	padding: 3px 8px;
+	font-size: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.btn-edit {
+	background-color: #444;
+	color: white;
+	border: none;
+	padding: 3px 8px;
+	font-size: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.btn-save {
+	background-color: #28a745;
+	color: white;
+	border: none;
+	padding: 4px 10px;
+	font-size: 12px;
+	border-radius: 4px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.btn-cancel {
+	background-color: #aaa;
+	color: white;
+	border: none;
+	padding: 4px 10px;
+	font-size: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.form-post {
+	width: 90%;
+	max-width: 900px;
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: block;
+}
+
+.forgot-password-link {
+	margin-top: 10px;
+	font-size: 14px;
+	text-align: center;
+}
+
+	.forgot-password-link a {
+		color: #007bff;
+		text-decoration: underline;
+	}
+
+		.forgot-password-link a:hover {
+			color: #0056b3;
+		}
+
+.admin-tabs {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	gap: 10px;
+}
+
+	.admin-tabs button {
+		padding: 8px 16px;
+		border: none;
+		background-color: #ccc;
+		cursor: pointer;
+		border-radius: 4px;
+	}
+
+		.admin-tabs button.active {
+			background-color: #007bff;
+			color: white;
+		}
+
+.admin-section {
+	padding: 10px 20px;
+}
+
+.admin-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+	.admin-table th, .admin-table td {
+		border: 1px solid #ccc;
+		padding: 6px 10px;
+		text-align: left;
+	}
+
+.admin-message {
+	margin-bottom: 20px;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.admin-comment {
+	margin-left: 20px;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+/* Stylowanie linków w postach i komentarzach */
+.post a, .comment a {
+	color: #007bff;
+	text-decoration: underline;
+	background: none;
+	padding: 0;
+}
+
+	.post a:hover, .comment a:hover {
+		color: #0056b3;
+		text-decoration: underline;
+	}
+
+/* Styl cytatów [quote] */
+.post blockquote, .comment blockquote {
+	border-left: 4px solid #ccc;
+	margin: 10px 0;
+	padding: 8px 12px;
+	background: #f9f9f9;
+	font-style: italic;
+	color: #555;
+}
+
+/* Styl list [ul]/[li] */
+.post ul, .comment ul {
+	margin: 8px 0;
+	padding-left: 20px;
+}
+
+.post li, .comment li {
+	margin-bottom: 4px;
+}
+
+/* Home Page Styles */
+.home-welcome {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+	.home-welcome h1 {
+		font-size: 2em;
+		margin-bottom: 10px;
+	}
+
+	.home-welcome p {
+		font-size: 18px;
+		max-width: 700px;
+		margin: 10px auto;
+		color: #333;
+	}
+
+	.home-welcome .highlight {
+		color: orange;
+	}
+
+.cta-button {
+	background-color: orange;
+	color: white;
+	border: none;
+	padding: 12px 25px;
+	font-size: 18px;
+	border-radius: 8px;
+	cursor: pointer;
+	margin-top: 15px;
+	transition: background 0.3s;
+}
+
+	.cta-button:hover {
+		background-color: #cc7a00;
+	}
+
+/* Feed preview styles */
+.home-feed {
+	margin-top: 30px;
+}
+
+	.home-feed h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+.feed-list {
+	list-style: none;
+	padding: 0;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.feed-item {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 15px;
+	margin-bottom: 10px;
+	background: #f9f9f9;
+	transition: transform 0.2s;
+}
+
+	.feed-item:hover {
+		transform: scale(1.02);
+	}
+
+	.feed-item p {
+		margin: 8px 0;
+		font-size: 16px;
+		color: #444;
+	}
+
+	.feed-item small {
+		color: #777;
+	}
+
+.feed-more {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.feed-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background: #333;
+	color: white;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: background 0.3s;
+}
+
+	.feed-button:hover {
+		background: #111;
+	}
+
+.no-posts {
+	text-align: center;
+	color: #555;
+	font-size: 16px;
+}
+
+.feed-item a {
+	color: #007bff;
+	text-decoration: underline;
+	background: none;
+	padding: 0;
+}
+
+	.feed-item a:hover {
+		color: #0056b3;
+	}
+
+/* Styl dla linku w stopce */
+.footer-link {
+	color: #ff8c00; /* Pomarańczowy akcent */
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+	.footer-link:hover {
+		color: #d36c00; /* Ciemniejszy pomarańcz przy najechaniu */
+		text-decoration: underline;
+	}
+
+/* Opcjonalne dopasowanie stopki */
+#stopka {
+	float: right;
+	height: 40px;
+	border-radius: 10px;
+	border: 2px solid black;
+	margin: 5px;
+	background-color: white;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 15px;
+}
