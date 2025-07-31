@@ -138,48 +138,55 @@ emru.pl/
 ```
 ---
 
-Struktura bazy danych:
+## 📦 Struktura bazy danych (PostgreSQL)
+
+Projekt korzysta z bazy PostgreSQL (zdefiniowanej w pliku `db.js`).  
+Poniżej znajduje się przykładowy schemat bazy danych używanej przez backend:
+
+### Tabela `users`
+```sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    display_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    activation_token VARCHAR(64),
+    is_active BOOLEAN DEFAULT FALSE,
+    role VARCHAR(10) DEFAULT 'user'
+);
 ```
-Tabela users
-
-id (PK, SERIAL)
-
-username (LOWERCASE)
-
-display_name (oryginalna forma)
-
-email (LOWERCASE)
-
-password (HASHED)
-
-activation_token (NULL po aktywacji)
-
-is_active (BOOLEAN)
-
-role (user / admin)
-
 Tabela messages (posty)
-
-id (PK, SERIAL)
-
-user_id (FK → users.id)
-
-message (TEXT)
-
-sent_at (TIMESTAMP, NOW() przy dodaniu)
-
-Tabela comments (komentarze)
-
-id (PK, SERIAL)
-
-message_id (FK → messages.id)
-
-user_id (FK → users.id)
-
-content (TEXT)
-
-created_at (TIMESTAMP, NOW() przy dodaniu)
+```sql
+Kopiuj
+Edytuj
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    message TEXT NOT NULL,
+    sent_at TIMESTAMP DEFAULT NOW()
+);
 ```
+Tabela comments (komentarze)
+```sql
+Kopiuj
+Edytuj
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    message_id INT REFERENCES messages(id) ON DELETE CASCADE,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+```
+🔑 Uwagi:
+Hasła użytkowników są hashowane przy rejestracji (bcrypt).
+
+Pole activation_token jest używane do aktywacji konta przez e-mail.
+
+Relacje posiadają ON DELETE CASCADE, aby przy usunięciu użytkownika/postu usuwały się również jego komentarze.
+
+Uprawnienia administracyjne są przechowywane w kolumnie role (user lub admin).
 
 ---
 
